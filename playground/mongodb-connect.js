@@ -6,7 +6,7 @@ MongoClient.connect('mongodb://localhost:27017/TodoApp', function(err, db){
   }
   console.log("Connected to MongoDB Server");
 
-/*
+
 db.collection('Todos').insertOne({
   text : "I am awesome",
   completed : false
@@ -16,8 +16,8 @@ db.collection('Todos').insertOne({
   }
 
   console.log(JSON.stringify(result.ops, undefined, 2));
-})
-*/
+});
+
 db.collection('User').insertOne({
   name : "Aditya",
   age : 20,
@@ -28,7 +28,7 @@ db.collection('User').insertOne({
   }
 
   console.log(JSON.stringify(result.ops, undefined, 2));
-})
+});
 
   db.close();
 });
