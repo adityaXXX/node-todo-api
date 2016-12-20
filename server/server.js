@@ -34,6 +34,15 @@ app.post('/todos', function(req, res){
 //   });
 // });
 
+//practice2
+// app.get('/usersinco', function(req, res){
+//   User.find().then(function(doc){
+//     res.send({doc});
+//   }, function(err){
+//     res.status(400).send(err);
+//   });
+// });
+
 app.get('/todos', function(req, res){
   Todo.find().then(function(doc){
     res.send({doc});
