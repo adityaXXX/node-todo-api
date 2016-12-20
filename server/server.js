@@ -34,6 +34,16 @@ app.post('/todos', function(req, res){
 //   });
 // });
 
+app.get('/todos', function(req, res){
+  Todo.find().then(function(doc){
+    res.send({doc});
+  }, function(err){
+    res.status(400).send(err);
+  });
+});
+
 app.listen(3000, function(){
   console.log("Server is up on port 3000");
 });
+
+module.exports = {app};
