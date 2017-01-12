@@ -2,6 +2,7 @@ var express = require('express');
 var bodyParser = require('body-parser');
 
 var app = express();
+const port = process.env.PORT || 3000;
 
 var {ObjectID} = require('mongodb');
 
@@ -26,7 +27,7 @@ app.post('/todos', function(req, res){
 // practice1
 // app.post('/usersinc', function(req, res){
 //   var user1 = new User({
-//     email : req.body.text
+//     email : req.body.email
 //   });
 //   user1.save().then(function(doc){
 //     res.send(doc);
@@ -70,8 +71,8 @@ app.get('/todos/:id', function(req, res){
   res.status(400).send();
 });
 
-app.listen(3000, function(){
-  console.log("Server is up on port 3000");
+app.listen(port, function(){
+  console.log(`Server is up on port ${port}`);
 });
 
 module.exports = {app};
