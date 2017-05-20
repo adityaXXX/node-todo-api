@@ -7,8 +7,8 @@ MongoClient.connect('mongodb://localhost:27017/TodoApp', function(err, db){
   console.log("Connected to MongoDB Server");
 
 
-db.collection('Todos').insertOne({
-  text : "I am awesome",
+db.collection('todos').insertOne({
+  text : "I am awesome.",
   completed : false
 }, function(err, result){
   if(err){
@@ -18,8 +18,8 @@ db.collection('Todos').insertOne({
   console.log(JSON.stringify(result.ops, undefined, 2));
 });
 
-db.collection('User').insertOne({
-  name : "Aditya",
+db.collection('users').insertOne({
+  name : "Aditya Kumar",
   age : 20,
   location : "lko"
 }, function(err, result){
